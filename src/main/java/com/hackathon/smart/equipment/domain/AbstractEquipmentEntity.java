@@ -13,13 +13,24 @@ public class AbstractEquipmentEntity implements Serializable, Comparable{
 	private static final long serialVersionUID = 1L;
 	private String equipmentId;
 	private String sequenceNumber;
-	private String version;
+	private String processingStatus;
+	public String getProcessingStatus() {
+		return processingStatus;
+	}
+
+
+	public void setProcessingStatus(String processingStatus) {
+		this.processingStatus = processingStatus;
+	}
+
+	private long version;
 	
  
-	public AbstractEquipmentEntity(String equipmentId,String sequenceNumber,String version){
+	public AbstractEquipmentEntity(String equipmentId,String sequenceNumber,String processingStatus, long version){
 		this.equipmentId=equipmentId;
 		this.sequenceNumber = sequenceNumber;
 		this.version = version;
+		this.processingStatus = processingStatus;
 	}
 	
 	
@@ -43,12 +54,12 @@ public class AbstractEquipmentEntity implements Serializable, Comparable{
 	}
 
 
-	public String getVersion() {
+	public long getVersion() {
 		return version;
 	}
 
 
-	public void setVersion(String version) {
+	public void setVersion(long version) {
 		this.version = version;
 	}
 

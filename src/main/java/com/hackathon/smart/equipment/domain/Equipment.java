@@ -18,8 +18,8 @@ public class Equipment extends AbstractEquipmentEntity{
 	
 	private static final long serialVersionUID = 1L;
 
-	public Equipment(String equipmentId, String sequenceNumber, String version) {
-		super(equipmentId, sequenceNumber, version);
+	public Equipment(String equipmentId, String sequenceNumber,String processingStatus, long version) {
+		super(equipmentId, sequenceNumber, processingStatus, version);
 		// TODO Auto-generated constructor stub
 	}
 
