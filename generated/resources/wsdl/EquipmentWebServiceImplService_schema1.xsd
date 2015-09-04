@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservice.smart.hackathon.com/" xmlns:tns="http://webservice.smart.hackathon.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="setEquipment" type="tns:setEquipment"/>
+
+  <xs:element name="setEquipmentResponse" type="tns:setEquipmentResponse"/>
+
+  <xs:element name="upEquipment" type="tns:upEquipment"/>
+
+  <xs:element name="upEquipmentResponse" type="tns:upEquipmentResponse"/>
+
+  <xs:element name="updateEquipmentSnowDetails" type="tns:updateEquipmentSnowDetails"/>
+
+  <xs:element name="updateEquipmentSnowDetailsResponse" type="tns:updateEquipmentSnowDetailsResponse"/>
+
+  <xs:complexType name="upEquipment">
+    <xs:sequence>
+      <xs:element name="upEquipmentRequest" type="tns:upEquipmentRequest" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="upEquipmentRequest">
+    <xs:sequence>
+      <xs:element name="equipmentDescription" type="xs:string" minOccurs="0"/>
+      <xs:element name="equipmentId" type="xs:string" minOccurs="0"/>
+      <xs:element name="sequenceNumber" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="upEquipmentResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="setEquipment">
+    <xs:sequence>
+      <xs:element name="setEquipmentRequest" type="tns:setEquipmentRequest" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="setEquipmentRequest">
+    <xs:sequence>
+      <xs:element name="equipmentDescription" type="xs:string" minOccurs="0"/>
+      <xs:element name="equipmentId" type="xs:string" minOccurs="0"/>
+      <xs:element name="sequenceNumber" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="setEquipmentResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateEquipmentSnowDetails">
+    <xs:sequence>
+      <xs:element name="updateEquipmentSnow" type="tns:updateEquipmentSnowRequest" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateEquipmentSnowRequest">
+    <xs:sequence>
+      <xs:element name="equipmentDescription" type="xs:string" minOccurs="0"/>
+      <xs:element name="equipmentId" type="xs:string" minOccurs="0"/>
+      <xs:element name="sequenceNumber" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateEquipmentSnowDetailsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
